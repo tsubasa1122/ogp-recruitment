@@ -1,24 +1,12 @@
-# README
+# OGP画像を生成して、求人を募集するサービス
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
 
-Things you may want to cover:
+### システム要件
 
-* Ruby version
+- ruby (2.5.1) 基本的に最新の安定版を使用したい
+- Rails (5.2.0) 上に同じ
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+git clone git@github.com:tsubasa1122/ogp-recruitment.git
+```
