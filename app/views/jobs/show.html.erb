@@ -1,3 +1,14 @@
+<% content_for :ogp do %>
+  <meta property="og:title" content="<%= @job.title %>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="/jobs/<%= @job.id %>" />
+  <meta property="og:image" content=<%= "#{root_url}#{@job.image_url}" %> />
+  <meta property="og:site_name"  content="Techpit_Job" />
+  <meta property="og:description" content="<%= @job.content %>" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@techpit_jp" />
+<% end %>
+
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
