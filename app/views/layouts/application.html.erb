@@ -31,3 +31,35 @@
     <%= yield %>
   </body>
 </html>
+
+<script>
+    //url-texを現在のURL（document.URL）に変更する
+    $('.url-text').text(document.URL);
+
+    //clipURL関数の定義（urlをコピーする機能）
+    function clipURL() {
+      //コピー用のtextareaを作成
+      $('body').append('<textarea id="currentURL" style="position:fixed;left:-100%;">'+location.href+'</textarea>');
+      
+      //currentURLのIDを選択
+      $('#currentURL').select();
+
+      //選択しているテキストをクリップボードにコピーする
+      document.execCommand('copy');
+
+      //現在のcurrentURLのIDを削除
+      $('#currentURL').remove();
+
+      //アラートを表示する
+      alert("URLをコピーしました。");
+    }
+
+    //textにcard-titleクラスのテキストを代入する
+    var text = $('.card-title').text();
+
+    //twitterurlのシェア用urlを作成してtwitterurlに挿入
+    var twitterurl = "https://twitter.com/intent/tweet?url=" + document.URL + "&text=" + text + "&hashtags=#テックピット";
+
+    //btn-twクラスのリンクをtwitterurlに変更する
+    $('.btn-tw').attr('href',twitterurl);
+  </script>
