@@ -13,6 +13,6 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:user_id, :job_id, :messages, :status)
+    params.require(:entry).permit(:user_id, :job_id, :message, :status)
   end
 end
